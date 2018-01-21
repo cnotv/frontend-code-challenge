@@ -1,0 +1,12 @@
+.c-container {
+  max-width: $width-layout;
+  margin: 0 auto;
+  padding: $spacing-layout;
+}
+
+.c-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: $grid-gutter-size;
+  grid-row-gap: $grid-gutter-size;
+}

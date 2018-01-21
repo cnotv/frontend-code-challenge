@@ -1,49 +1,45 @@
-# Front-End Interview Test
+# frontend-interview-test
 
-This is a simple front-end code challenge created to serve two purposes:
-
-1. Show off your skills,
-1. Give us a better understanding of your skills.
-
-## The Task
-
-The programming challenge exists in 2 parts:
-* Part A: HTML + CSS
-* Part B: Javascript
-
-### PART A: HTML + CSS
+> An interview test for Front-End Development job candidates
 
 ![Screen](https://raw.githubusercontent.com/mcmakler/frontend-code-challenge/master/assets/fe_test_example_screen.png)
 
-* Create a layout based on the given screen (fe_test_example_screen.png).
-* Style the layout consistently and beautifully, adhering as closely to the design as possible.
-* **NOTE:** You are free to use any preprocessor you wish, or write raw CSS. *Bonus points for an explanation of your choice.*
+## Build Setup
 
-### PART B: Javascript
+``` bash
+# install dependencies
+npm install
 
-* Consume our public API @ https://api.mcmakler.de/v1/advertisements to retrieve a list of advertisements of vacant apartments.
-* Display the first 10 advertisements in the HTML + CSS layout created in step A, sticking to the layout, placing data where it fits.
-* **NOTE:** You are free to use any framework you wish, or do it VanillaJS style. *Brief explanation of your choice.*
+# serve with hot reload at localhost:8080
+npm run dev
 
-## Additional Instructions
+# build for production with minification
+npm run build
 
-* Fork this repository
-* After you're done, provide us the link to your repository.
-* Leave comments where you were not sure how to properly proceed.
-* Implementations without a README will be automatically rejected.
-* No pull requests
-* ES6 and above
+# build for production and view the bundle analyzer report
+npm run build --report
 
-## Bonus Points
+# run unit tests
+npm run unit
 
-* Tests
-* Clean code!
-* Knowledge of application flow.
-* Knowledge of modern best practices/coding patterns.
-* Demonstration of good state management.
-* Usage of frameworks/supersets.
-* Pixel perfection.
-* Componential thinking.
-* Usage of linters.
-* Git hooks.
-* Usage of Material Design concepts
+# run all tests
+npm test
+```
+
+## Picked tools
+
+### Preprocessor: SCSS
+- Clean styles
+- Highly mantainibility and scalability
+- Easy to track and update using variables, [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) are still not full supported
+- Possibility to split style in components (in this case using BEM methodology)
+
+### Framework: Vue.js
+- Customizable and safe 1 minute production ready Webpack setup
+- Highly mantainibility and scalability
+- Provides HTML template (JS literals are used for plugins or extensions, not main project)
+- Possibility to define styles within components
+- Unit tests integration
+- Linters
+- State management pattern + library with [Vuex](https://vuex.vuejs.org/en/intro.html)
+- Dev tools to inspect components and states

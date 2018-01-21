@@ -1,0 +1,76 @@
+.o-card {
+  border: $border-primary;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    position: relative;
+    min-height: 100px;
+    background-color: #ddd;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+
+  &__content {
+    padding: $spacing-card;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &__main {
+      flex-grow: 1;
+    }
+
+    &__footer {
+      margin-top: $spacing-card;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-s;
+    margin: 20px;
+    padding: 5px 10px;
+    border-radius: $radius-card;
+    color: $body-color-secondary;
+    background-color: #fff;
+    box-shadow: $shadow-card;
+  }
+
+  &__description {
+    height: 3em; // from the picture is not clear if you want maximum 2 lines since there's hyphens
+    display: flex; // fallback if above is commented
+    flex-direction: column;
+    margin-bottom: 1em;
+    hyphens: auto; // this is not suppoted everywhere
+    overflow: hidden;
+  }
+
+  &__location {
+    color: $body-color-secondary;
+    font-size: $font-size-s;
+  }
+
+  &__price {
+    font-weight: $font-weight-bold;
+  }
+
+  &__info {
+    font-weight: $font-weight-light;
+    font-size: $font-size-s;
+
+    *+* {
+      border-left: $border-primary;
+      margin-left: $spacing-card/3;
+      padding-left: $spacing-card/3;
+    }
+  }
+}
